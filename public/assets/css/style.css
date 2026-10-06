@@ -1,0 +1,1440 @@
+/* ==========================
+   ROOT COLOR
+========================== */
+
+:root{
+    --primary:#1B3C53;
+    --secondary:#234C6A;
+    --accent:#456882;
+    --cream:#D2C1B6;
+    --white:#ffffff;
+}
+
+/* ==========================
+   GLOBAL
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#ffffff;
+    color:#334155;
+    line-height:1.7;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.back
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar-brand{
+    font-size:28px;
+    font-weight:700;
+    color:var(--primary)!important;
+    gap:12px;
+}
+
+.navbar-logo{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+@media(max-width:768px){
+    .navbar-logo{
+        width:38px;
+        height:38px;
+    }
+
+    .navbar-brand{
+        font-size:22px;
+    }
+}
+
+/* ==========================
+   NAVBAR MODERN
+========================== */
+
+.navbar{
+
+    padding:14px 0;
+    transition:.35s;
+
+}
+
+.navbar-brand{
+
+    font-size:27px;
+    font-weight:700;
+    color:var(--primary)!important;
+
+}
+
+.navbar-logo{
+
+    width:48px;
+    height:48px;
+    object-fit:contain;
+    margin-right:10px;
+
+}
+
+.navbar-nav .nav-link{
+
+    color:var(--primary);
+    font-weight:600;
+    margin-left:10px;
+    margin-right:10px;
+    transition:.3s;
+    position:relative;
+
+}
+
+.navbar-nav .nav-link:hover{
+
+    color:var(--accent);
+
+}
+
+/* underline */
+
+.navbar-nav .nav-link::after{
+
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+
+    width:0%;
+    height:2px;
+
+    background:var(--accent);
+
+    transition:.3s;
+
+}
+
+.navbar-nav .nav-link:hover::after{
+
+    width:100%;
+
+}
+
+/* dropdown */
+
+.modern-dropdown{
+
+    border:none;
+    border-radius:15px;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.08);
+
+    padding:10px;
+
+    min-width:230px;
+
+}
+
+.modern-dropdown .dropdown-item{
+
+    padding:12px 18px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+.modern-dropdown .dropdown-item:hover{
+
+    background:#EEF5FF;
+
+    color:#176B87;
+
+    transform:translateX(5px);
+
+}
+
+/* active */
+
+.navbar-nav .nav-link.active{
+
+    color:#176B87;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero-section{
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+    padding-top:90px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-title{
+    font-size:64px;
+    font-weight:800;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-title span{
+    color:var(--cream);
+}
+
+.hero-text{
+    font-size:18px;
+    opacity:.95;
+    margin-bottom:30px;
+}
+
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+   HERO MODERN FIXED FINAL
+========================== */
+
+.hero-section{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    padding-top: 90px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary),
+        var(--accent)
+    );
+}
+
+/* Overlay */
+.hero-overlay{
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(255,255,255,.06),
+            transparent 30%
+        );
+}
+
+/* Full row */
+.hero-section .row{
+    min-height: calc(100vh - 90px);
+    align-items: end;
+}
+
+/* Text */
+.hero-content{
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Badge */
+.badge-school{
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+/* Title */
+.hero-title{
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-title span{
+    color: var(--cream);
+}
+
+/* Text */
+.hero-text{
+    font-size: 18px;
+    opacity: .95;
+    line-height: 1.9;
+    max-width: 90%;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons .btn{
+    border-radius: 50px;
+    padding: 14px 30px;
+    font-weight: 600;
+}
+
+/* Image wrapper */
+.hero-image-wrapper{
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* HERO IMAGE DESKTOP */
+.hero-img{
+    height: 100vh; /* lebih besar */
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    animation: none !important;
+
+}
+
+/* ==========================
+   TABLET
+========================== */
+@media(max-width:992px){
+
+    .hero-section{
+        padding: 110px 0 0;
+    }
+
+    .hero-section .row{
+        min-height: calc(100vh - 110px);
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hero-content{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .hero-title{
+        font-size: 42px;
+    }
+
+    .hero-text{
+        max-width: 100%;
+    }
+
+    .hero-image-wrapper{
+        width: 100%;
+        height: 65vh;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .hero-img{
+        height: 95vh;
+        width: auto;
+        max-width: none;
+        object-fit: cover;
+
+        transform: scale(1.25);
+        transform-origin: bottom center;
+    }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+@media(max-width:768px){
+
+    .hero-title{
+        font-size: 34px;
+    }
+
+    .hero-text{
+        font-size: 16px;
+    }
+
+    .badge-school{
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+
+    .hero-image-wrapper{
+        height: 60vh;
+    }
+
+    .hero-img{
+        height: 85vh;
+        transform: scale(1.35);
+        transform-origin: bottom center;
+    }
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+    font-size:42px;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+    font-size:42px;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+/* ==========================
+   SAMBUTAN
+========================== */
+
+.section-sambutan{
+    padding:100px 0;
+    background:#f8fafc;
+}
+
+.kepala-sekolah{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border:8px solid var(--cream);
+}
+
+/* ==========================
+   SECTION HEADER
+========================== */
+
+.section-badge{
+    display:inline-block;
+    background:rgba(69,104,130,.1);
+    color:var(--secondary);
+    padding:8px 18px;
+    border-radius:50px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    max-width:700px;
+    margin:auto;
+    color:#64748b;
+    font-size:16px;
+}
+
+/* ==========================
+   MODERN INFO CARD
+========================== */
+
+.modern-card{
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    border: 1px solid rgba(27,60,83,.06);
+    text-align: center; /* penting */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontal */
+    justify-content: center; /* center vertical */
+}
+
+.modern-card i{
+    font-size: 40px;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.modern-card h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.modern-card p{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.modern-card:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(27,60,83,.12);
+}
+
+/* ==========================
+   PROFIL CARD MODERN NEW
+========================== */
+
+.profil-card-modern{
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+}
+
+/* Hover effect */
+.profil-card-modern:hover{
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 45px rgba(0,0,0,.15);
+}
+
+/* Icon */
+.profil-card-modern i{
+    font-size: 45px;
+    margin-bottom: 18px;
+}
+
+/* Number */
+.profil-card-modern h3{
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Text */
+.profil-card-modern p{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* =====================================
+        MAKLUMAT PELAYANAN
+===================================== */
+
+.maklumat-section{
+
+    padding:100px 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1d4f7a,
+        #2d6b97,
+        #3d82af
+    );
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* ornament */
+
+.maklumat-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    top:-120px;
+    right:-100px;
+
+}
+
+.maklumat-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    bottom:-100px;
+    left:-100px;
+
+}
+
+.maklumat-section .section-title{
+
+    color:white;
+
+}
+
+.maklumat-section .section-subtitle{
+
+    color:rgba(255,255,255,.85);
+
+}
+
+/* ======================= */
+
+.maklumat-image{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.maklumat-image img{
+
+    width:100%;
+
+    transition:.4s;
+
+}
+
+.maklumat-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* ======================= */
+
+.maklumat-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+    position:relative;
+
+}
+
+.maklumat-header{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
+}
+
+.maklumat-header i{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #2d6b97,
+        #1d4f7a
+    );
+
+    color:white;
+
+    font-size:30px;
+
+    margin-right:20px;
+
+}
+
+.maklumat-header h3{
+
+    font-weight:700;
+
+    color:#1d4f7a;
+
+    margin:0;
+
+}
+
+/* ======================= */
+
+.maklumat-list{
+
+    padding-left:20px;
+
+}
+
+.maklumat-list li{
+
+    margin-bottom:18px;
+
+    line-height:1.8;
+
+    color:#555;
+
+    font-size:17px;
+
+}
+
+/* ======================= */
+
+.kepsek-sign{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px dashed #d8d8d8;
+
+}
+
+.kepsek-sign h5{
+
+    color:#1d4f7a;
+
+    margin-bottom:8px;
+
+}
+
+.kepsek-sign strong{
+
+    color:#0f3553;
+
+    font-size:18px;
+
+}
+
+/* ======================= */
+
+@media(max-width:992px){
+
+    .maklumat-section{
+
+        padding:80px 0;
+
+    }
+
+    .maklumat-card{
+
+        padding:30px;
+
+    }
+
+    .maklumat-header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .maklumat-header i{
+
+        margin-right:0;
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .maklumat-card{
+
+        padding:25px;
+
+    }
+
+    .maklumat-list li{
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================
+   COLOR VARIANTS
+========================== */
+
+/* Biru tua */
+.profil-card-blue{
+    background: linear-gradient(135deg,#176B87,#1f8bb0);
+    color: white;
+}
+.profil-card-blue i{
+    color: #EEF5FF;
+}
+
+/* Biru muda */
+.profil-card-light{
+    background: linear-gradient(135deg,#86B6F6,#5e9df5);
+    color: white;
+}
+.profil-card-light i{
+    color: #EEF5FF;
+}
+
+/* Soft blue */
+.profil-card-soft{
+    background: linear-gradient(135deg,#B4D4FF,#86B6F6);
+    color: #176B87;
+}
+.profil-card-soft i{
+    color: #176B87;
+}
+
+/* Gold/cream */
+.profil-card-gold{
+    background: linear-gradient(135deg,#EEF5FF,#dbe9ff);
+    color: #176B87;
+}
+.profil-card-gold i{
+    color: #176B87;
+}
+
+/* ==========================
+   MODERN VISI MISI
+========================== */
+
+.visi-section{
+    background-image: url('../images/bg-grey.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+    position: relative;
+}
+
+.visi-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(27,60,83,.75);
+}
+
+.visi-section .container{
+    position: relative;
+    z-index: 2;
+}
+
+/* CARD BASE */
+.modern-visi{
+    position: relative;
+    padding: 45px;
+    transition: .4s;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(8px);
+    height: 100%;
+}
+
+.modern-visi:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(27,60,83,.20);
+}
+
+/* VISI CARD COLOR */
+.visi-card{
+    background: rgba(255,255,255,.95);
+    border-top: 6px solid var(--cream);
+}
+
+/* MISI CARD COLOR */
+.misi-card{
+    background: rgba(210,193,182,.95);
+    border-top: 6px solid var(--secondary);
+}
+
+/* ICON */
+.visi-icon{
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.visi-icon i{
+    color: white;
+    font-size: 30px;
+}
+
+/* TITLE */
+.modern-visi h3{
+    color: var(--primary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* LIST */
+.modern-visi ul{
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.modern-visi ul li{
+    margin-bottom: 14px;
+    line-height: 1.8;
+    color: #334155;
+}
+
+/* BUTTON */
+.modern-btn{
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.modern-btn:hover{
+    transform: translateY(-3px);
+}
+
+/* ==========================
+   EKSTRA CARD MODERN
+========================== */
+
+.ekstra-card{
+    border-radius: 25px;
+    padding: 35px 25px;
+    text-align: center;
+    color: white;
+    height: 100%;
+    transition: .4s ease;
+    box-shadow: 0 15px 30px rgba(0,0,0,.08);
+}
+
+.ekstra-card:hover{
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.ekstra-card i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.ekstra-card h4{
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.ekstra-card p{
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ==========================
+   WARNA CERAH PER CARD
+========================== */
+
+.ekstra-card-blue{
+    background: linear-gradient(135deg,#4facfe,#00f2fe);
+}
+
+.ekstra-card-sky{
+    background: linear-gradient(135deg,#43e97b,#38f9d7);
+}
+
+.ekstra-card-purple{
+    background: linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.ekstra-card-green{
+    background: linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+.ekstra-card-orange{
+    background: linear-gradient(135deg,#f7971e,#ffd200);
+}
+
+.ekstra-card-red{
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+
+.ekstra-card-yellow{
+    background: linear-gradient(135deg,#fce38a,#f38181);
+}
+
+.ekstra-card-dark{
+    background: linear-gradient(135deg,#141e30,#243b55);
+}
+
+.ekstra-card-pink{
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+}
+
+.ekstra-card-cyan{
+    background: linear-gradient(135deg,#36d1dc,#5b86e5);
+}
+
+.ekstra-card-lime{
+    background: linear-gradient(135deg,#56ab2f,#a8e063);
+}
+
+/* ==========================
+   EKSTRAKURIKULER SLIDER
+========================== */
+
+.ekstraSwiper{
+    width:100%;
+    overflow:hidden;
+    padding-bottom:20px;
+}
+
+.ekstraSwiper .swiper-wrapper{
+    align-items:stretch;
+}
+
+.ekstraSwiper .swiper-slide{
+    height:auto;
+    display:flex;
+}
+
+.ekstraSwiper .program-card{
+    width:100%;
+}
+
+/* ==========================
+   PRESTASI
+========================== */
+
+.prestasi-section{
+    padding:100px 0;
+    background:white;
+}
+
+.prestasi-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+
+    border-left:5px solid var(--primary);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.prestasi-card:hover{
+    transform:translateY(-8px);
+}
+
+.prestasi-card h5{
+    font-weight:600;
+    color:var(--primary);
+}
+
+.prestasi-card small{
+    color:#64748b;
+}
+
+.prestasi-section h3{
+    color: var(--primary);
+    position: relative;
+    padding-left: 18px;
+}
+
+.prestasi-section h3::before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--secondary);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* ==========================
+   GALERI SLIDER
+========================== */
+
+.galeriSwiper{
+    width:100%;
+    overflow:hidden;
+    padding-bottom:20px;
+}
+
+.swiper-wrapper{
+    align-items:stretch;
+}
+
+.swiper-slide{
+    height:auto;
+}
+
+.gallery-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    height:100%;
+}
+
+.gallery-img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.gallery-caption{
+    padding:20px;
+    text-align:center;
+}
+
+.gallery-caption h5{
+    color:var(--primary);
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.gallery-caption p{
+    color:#64748b;
+    margin-bottom:0;
+    font-size:14px;
+    line-height:1.8;
+}
+
+/* ==========================
+   KONTAK
+========================== */
+
+.contact-section{
+    padding:100px 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--secondary),
+        var(--primary)
+    );
+}
+
+.contact-section h2{
+    font-size:42px;
+    font-weight:700;
+}
+
+.contact-section p{
+    color:rgba(255,255,255,.9);
+}/* ==========================
+   CONTACT MODERN
+========================== */
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 17px;
+}
+
+.contact-item i{
+    font-size: 22px;
+    color: var(--cream);
+    min-width: 28px;
+}
+
+.contact-item a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.contact-item a:hover{
+    color: var(--cream);
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+    background:var(--primary);
+    color:white;
+
+    text-align:center;
+
+    padding:25px 0;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.btn-primary{
+    background:var(--primary);
+    border-color:var(--primary);
+    border-radius:50px;
+    padding:14px 30px;
+    font-weight:600;
+}
+
+.btn-primary:hover{
+    background:var(--secondary);
+    border-color:var(--secondary);
+}
+
+.btn-warning{
+    background:var(--cream);
+    border:none;
+    color:var(--primary);
+
+    border-radius:50px;
+    padding:14px 30px;
+    font-weight:600;
+}
+
+.btn-warning:hover{
+    background:#c7b2a5;
+    color:var(--primary);
+}
+
+.btn-outline-light{
+    border-radius:50px;
+    padding:14px 30px;
+    font-weight:600;
+}
+
+.btn-outline-light:hover{
+    background:var(--cream);
+    color:var(--primary);
+    border-color:var(--cream);
+}
+
+/* ==========================
+   SWIPER RESPONSIVE
+========================== */
+
+@media(min-width:992px){
+
+    .gallery-img{
+        height:260px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .gallery-img{
+        height:220px;
+    }
+
+    .gallery-caption{
+        padding:15px;
+    }
+
+    .gallery-caption h5{
+        font-size:16px;
+    }
+
+}
+
+.galeriSwiper{
+    width:100%;
+    overflow:hidden;
+}
+
+.galeriSwiper .swiper-wrapper{
+    align-items:stretch;
+}
+
+.galeriSwiper .swiper-slide{
+    height:auto;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .hero-section{
+        text-align:center;
+    }
+
+    .hero-title{
+        font-size:48px;
+    }
+
+    .hero-img{
+        margin-top:40px;
+        max-height:400px;
+    }
+
+    .kepala-sekolah{
+        width:220px;
+        height:220px;
+        margin-bottom:30px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero-title{
+        font-size:36px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .ppdb-section h2{
+        font-size:32px;
+    }
+
+    .contact-section h2{
+        font-size:32px;
+    }
+
+    .gallery-img{
+        height:250px;
+    }
+
+}
+
+
+/* misi-content */
+
+.modern-visi-card{
+    background:white;
+    border-left:6px solid var(--primary);
+}
+
+.misi-card{
+    position:relative;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    border-left:5px solid var(--primary);
+    transition:.3s;
+}
+
+.misi-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 35px rgba(23,107,135,.12);
+}
+
+.misi-number{
+    width:60px;
+    height:60px;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.misi-card h4{
+    color:var(--primary);
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.misi-card ul{
+    padding-left:20px;
+}
+
+.misi-card li{
+    margin-bottom:12px;
+    line-height:1.8;
+    color:#475569;
+}
