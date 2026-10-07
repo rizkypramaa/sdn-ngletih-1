@@ -123,75 +123,116 @@
     @endif
 
     <form
-        action="{{ route('admin.login.process') }}"
-        method="POST">
+    action="{{ route('admin.login.process') }}"
+    method="POST">
 
-        @csrf
+    @csrf
 
-        <div class="mb-3">
+    <div class="mb-3">
 
-            <label class="form-label">
-                Email
-            </label>
+        <label class="form-label">
+            Email
+        </label>
 
-            <div class="input-group">
+        <div class="input-group">
 
-                <span class="input-group-text">
+            <span class="input-group-text">
+                <i class="bi bi-envelope"></i>
+            </span>
 
-                    <i class="bi bi-envelope"></i>
-
-                </span>
-
-                <input
-                    type="email"
-                    name="email"
-                    class="form-control"
-                    placeholder="Masukkan email"
-                    value="{{ old('email') }}"
-                    required>
-
-            </div>
+            <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Masukkan email"
+                value="{{ old('email') }}"
+                required>
 
         </div>
 
-        <div class="mb-4">
+    </div>
 
-            <label class="form-label">
-                Password
-            </label>
+    <div class="mb-4">
 
-            <div class="input-group">
+        <label class="form-label">
+            Password
+        </label>
 
-                <span class="input-group-text">
+        <div class="input-group">
 
-                    <i class="bi bi-lock"></i>
+            <span class="input-group-text">
+                <i class="bi bi-lock"></i>
+            </span>
 
-                </span>
+            <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                placeholder="Masukkan password"
+                required>
 
-                <input
-                    type="password"
-                    name="password"
-                    class="form-control"
-                    placeholder="Masukkan password"
-                    required>
+            <button
+                type="button"
+                class="btn btn-outline-secondary"
+                id="togglePassword">
 
-            </div>
+                <i class="bi bi-eye" id="eyeIcon"></i>
+
+            </button>
 
         </div>
 
-        <button
-            type="submit"
-            class="btn btn-login w-100">
+    </div>
 
-            <i class="bi bi-box-arrow-in-right me-2"></i>
+    <button
+        type="submit"
+        class="btn btn-login w-100">
 
-            Login Admin
+        <i class="bi bi-box-arrow-in-right me-2"></i>
 
-        </button>
+        Login Admin
 
-    </form>
+    </button>
+
+    <!-- Button Kembali ke Home -->
+    <a
+        href="{{ url('/') }}"
+        class="btn btn-outline-secondary w-100 mt-3">
+
+        <i class="bi bi-house-door me-2"></i>
+
+        Kembali ke Home
+
+    </a>
+
+</form>
 
 </div>
+
+<script>
+    const togglePassword = document.getElementById('togglePassword');
+    const password = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    togglePassword.addEventListener('click', function () {
+
+        const type = password.getAttribute('type') === 'password'
+            ? 'text'
+            : 'password';
+
+        password.setAttribute('type', type);
+
+        if (type === 'text') {
+            eyeIcon.classList.remove('bi-eye');
+            eyeIcon.classList.add('bi-eye-slash');
+        } else {
+            eyeIcon.classList.remove('bi-eye-slash');
+            eyeIcon.classList.add('bi-eye');
+        }
+
+    });
+</script>
 
 </body>
 

@@ -879,134 +879,267 @@
             </h2>
         </div>
 
-          <div class="swiper ekstraSwiper">
+        <div class="swiper galeriSwiper">
 
             <div class="swiper-wrapper">
 
-    @forelse($galeris as $galeri)
+                @forelse($galeris as $galeri)
 
-        <div class="swiper-slide">
-            <div class="gallery-card">
+                    <div class="swiper-slide">
 
-                <img
-                    src="{{ asset('storage/' . $galeri->gambar) }}"
-                    class="gallery-img"
-                    alt="{{ $galeri->judul }}"
-                >
+                        <div class="gallery-card">
 
-                <div class="gallery-caption">
-                    <h5>{{ $galeri->judul }}</h5>
+                            <img
+                                src="{{ asset('storage/' . $galeri->gambar) }}"
+                                class="gallery-img"
+                                alt="{{ $galeri->judul }}"
+                            >
 
-                    <p>{{ $galeri->deskripsi }}</p>
-                </div>
+                            <div class="gallery-caption">
+
+                                <h5>{{ $galeri->judul }}</h5>
+
+                                <p>{{ $galeri->deskripsi }}</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                @empty
+
+                    <div class="swiper-slide">
+
+                        <div class="text-center">
+                            <p>Belum ada kegiatan di galeri.</p>
+                        </div>
+
+                    </div>
+
+                @endforelse
 
             </div>
-        </div>
-
-    @empty
-
-        <div class="swiper-slide">
-            <div class="text-center">
-                <p>Belum ada kegiatan di galeri.</p>
-            </div>
-        </div>
-
-    @endforelse
-
-</div>
 
         </div>
 
         <div class="text-center mt-5">
 
-        <a href="{{ route('berita') }}" class="btn btn-primary btn-lg">
+            <a href="{{ route('berita') }}" class="btn btn-primary btn-lg">
 
-            <i class="bi bi-newspaper me-2"></i>
+                <i class="bi bi-newspaper me-2"></i>
 
-            Lihat Berita Terkini
+                Lihat Berita Terkini
 
-        </a>
+            </a>
+
+        </div>
 
     </div>
-
-    </div>
-
 </section>
 
 <!-- KONTAK -->
-<section id="kontak" class="contact-section py-5">
+<section id="kontak" class="contact-section">
 
     <div class="container">
 
-        <div class="row g-4">
+        <!-- Header -->
+        <div class="contact-header text-center">
+            <span class="contact-badge">
+                <i class="bi bi-headset me-2"></i>
+                Kontak Kami
+            </span>
 
-            <!-- Title -->
-            <div class="col-12 text-center mb-4">
-                <h2 class="text-white">
-                    Hubungi Kami
-                </h2>
+            <h2>
+                Hubungi <span>Kami</span>
+            </h2>
 
-                <p class="text-white opacity-75">
-                    Informasi kontak resmi SDN Ngletih 1
-                </p>
+            <p>
+                Informasi kontak resmi SDN Ngletih 1
+                untuk keperluan informasi dan komunikasi.
+            </p>
+        </div>
+
+
+        <div class="row g-4 align-items-stretch">
+
+            <!-- INFORMASI KONTAK -->
+            <div class="col-lg-5">
+
+                <div class="contact-info-card">
+
+                    <div class="contact-card-title">
+                        <div class="contact-title-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+
+                        <div>
+                            <h4>Informasi Sekolah</h4>
+                            <p>Hubungi kami melalui informasi berikut.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Address -->
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Alamat</span>
+                            <p>
+                                SDN Ngletih 1,<br>
+                                Kota Kediri, Jawa Timur
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Telepon</span>
+                            <p>(0354) 123456</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="contact-detail">
+
+                        <div class="contact-detail-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+
+                            <a href="mailto:sdnegeringletih1@gmail.com">
+                                sdnegeringletih1@gmail.com
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Social Media -->
+                    <div class="social-section">
+
+                        <h5>
+                            <i class="bi bi-share-fill me-2"></i>
+                            Media Sosial
+                        </h5>
+
+                        <div class="social-list">
+
+                            <a href="#" target="_blank" class="social-item youtube">
+                                <i class="bi bi-youtube"></i>
+                                <span>
+                                    <small>YouTube</small>
+                                    sdnngletih1241
+                                </span>
+                            </a>
+
+
+                            <a href="#" target="_blank" class="social-item instagram">
+                                <i class="bi bi-instagram"></i>
+                                <span>
+                                    <small>Instagram</small>
+                                    sdn_ngletih1
+                                </span>
+                            </a>
+
+
+                            <a href="#" target="_blank" class="social-item tiktok">
+                                <i class="bi bi-tiktok"></i>
+                                <span>
+                                    <small>TikTok</small>
+                                    sdn_ngletih1
+                                </span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <!-- Contact Info -->
-            <div class="col-lg-3">
 
-                <div class="contact-item mb-3">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>SDN Ngletih 1, Kota Kediri</span>
+            <!-- MAP -->
+            <div class="col-lg-7">
+
+                <div class="contact-map-card">
+
+                    <div class="map-header">
+
+                        <div>
+                            <h4>
+                                <i class="bi bi-map-fill me-2"></i>
+                                Lokasi Sekolah
+                            </h4>
+
+                            <p>
+                                Temukan lokasi SDN Ngletih 1
+                            </p>
+                        </div>
+
+                        <span class="map-status">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            Kediri
+                        </span>
+
+                    </div>
+
+
+                    <div class="map-wrapper">
+
+                        <iframe
+                            src="https://maps.google.com/maps?q=SDN%20Ngletih%201%20Kediri&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            loading="lazy"
+                            allowfullscreen
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="map-footer">
+
+                        <div>
+                            <i class="bi bi-info-circle-fill"></i>
+                            <span>
+                                Lokasi sekolah berdasarkan Google Maps
+                            </span>
+                        </div>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=SDN+Ngletih+1+Kediri"
+                            target="_blank"
+                            class="map-button">
+
+                            Lihat Maps
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+
+                    </div>
+
                 </div>
 
-                <div class="contact-item mb-3">
-                    <i class="bi bi-telephone-fill"></i>
-                    <span>(0354) 123456</span>
-                </div>
-
-                <div class="contact-item mb-3">
-                    <i class="bi bi-envelope-fill"></i>
-                    <a href="mailto:sdnegeringletih1@gmail.com">
-                        sdnegeringletih1@gmail.com
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Social Media -->
-            <div class="col-lg-3">
-
-                <div class="contact-item mb-3">
-                    <i class="bi bi-youtube"></i>
-                    <a href="#" target="_blank">
-                        sdnngletih1241
-                    </a>
-                </div>
-
-                <div class="contact-item mb-3">
-                    <i class="bi bi-instagram"></i>
-                    <a href="#" target="_blank">
-                        sdn_ngletih1
-                    </a>
-                </div>
-
-                <div class="contact-item mb-3">
-                    <i class="bi bi-tiktok"></i>
-                    <a href="#" target="_blank">
-                        sdn_ngletih1
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="col-lg-6">
-
-                <iframe
-                  src="https://maps.google.com/maps?q=SDN%20Ngletih%201%20Kediri&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="300"
-                  style="border-radius:20px;border:0;">
-              </iframe>
             </div>
 
         </div>

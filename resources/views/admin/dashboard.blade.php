@@ -242,7 +242,7 @@
 
                     </div>
 
-                    <h3>—</h3>
+                    <h3>{{ $totalBerita }}</h3>
 
                     <p>Total Berita</p>
 
@@ -261,7 +261,7 @@
 
                     </div>
 
-                    <h3>—</h3>
+                    <h3>{{ $totalGaleri }}</h3>
 
                     <p>Total Galeri</p>
 
@@ -280,7 +280,7 @@
 
                     </div>
 
-                    <h3>—</h3>
+                    <h3>{{ $totalPrestasi }}</h3>
 
                     <p>Total Prestasi</p>
 
@@ -299,7 +299,7 @@
 
                     </div>
 
-                    <h3>—</h3>
+                    <h3>{{ $totalSarpras }}</h3>
 
                     <p>Total Sarpras</p>
 

@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\EkstrakurikulerController;
 
 use App\Http\Controllers\Admin\SarprasController;
 
-
+use App\Models\Berita;
 use App\Models\Galeri;
 use App\Models\Prestasi;
 use App\Models\Ekstrakurikuler;
@@ -113,8 +113,23 @@ Route::prefix('admin')->group(function () {
     Route::middleware('admin')->group(function () {
 
         // Dashboard
-        Route::get('/dashboard', [DashboardController::class, 'index'])
-            ->name('admin.dashboard');
+       Route::get('/dashboard', function () {
+
+    $totalBerita = Berita::count();
+    $totalGaleri = Galeri::count();
+    $totalPrestasi = Prestasi::count();
+    $totalEkstrakurikuler = Ekstrakurikuler::count();
+    $totalSarpras = Sarpras::count();
+
+    return view('admin.dashboard', [
+        'totalBerita' => $totalBerita,
+        'totalGaleri' => $totalGaleri,
+        'totalPrestasi' => $totalPrestasi,
+        'totalEkstrakurikuler' => $totalEkstrakurikuler,
+        'totalSarpras' => $totalSarpras,
+    ]);
+
+})->name('admin.dashboard');
 
         // Logout
         Route::post('/logout', [AuthController::class, 'logout'])

@@ -2,77 +2,65 @@ console.log("Website SDN Ngletih 1 Ready!");
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    // =========================
     // Slider Galeri
+    // =========================
+
     new Swiper(".galeriSwiper", {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
+
+        slidesPerView: 1,
         spaceBetween: 30,
-        slidesPerView: 1,
 
-        breakpoints: {
-            768: {
-                slidesPerView: 2
-            },
-            992: {
-                slidesPerView: 3
-            }
-        }
-    });
-
-    // Slider Ekstrakurikuler
-    new Swiper(".ekstraSwiper", {
         loop: true,
+
         autoplay: {
             delay: 3000,
             disableOnInteraction: false
         },
-        spaceBetween: 25,
-        slidesPerView: 1,
 
         breakpoints: {
+
             768: {
                 slidesPerView: 2
             },
+
             992: {
                 slidesPerView: 3
             }
+
         }
+
     });
 
-    new Swiper(".galeriSwiper", {
 
-    slidesPerView: 3,
-    spaceBetween: 30,
+    // =========================
+    // Slider Ekstrakurikuler
+    // =========================
 
-    loop: true,
+    new Swiper(".ekstraSwiper", {
 
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+        slidesPerView: 1,
+        spaceBetween: 25,
 
-    breakpoints: {
+        loop: true,
 
-        0: {
-            slidesPerView: 1
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
         },
 
-        768: {
-            slidesPerView: 2
-        },
+        breakpoints: {
 
-        992: {
-            slidesPerView: 3
+            768: {
+                slidesPerView: 2
+            },
+
+            992: {
+                slidesPerView: 3
+            }
+
         }
 
-    }
+    });
 
 });
-
-});
-
-
-
